@@ -1,6 +1,6 @@
-import { AppState } from "./types";
+import { AppState, Image, ImgDownload } from "./types";
 
-export const initialImagesState: any[] = [
+export const initialImagesState: Image[] = [
   "interview-resources/office-images/1.jpg",
   "interview-resources/office-images/1200px-Channel_1_Israel_DSC0021.jpg",
   "interview-resources/office-images/1428987716938.jpg",
@@ -94,8 +94,25 @@ export const initialImagesState: any[] = [
   "interview-resources/office-images/stock-photo-casually-dressed-colleagues-talking-in-an-open-plan-office-314848478-450x330.jpg",
   "interview-resources/office-images/the-skimm-office-01.jpg",
   "interview-resources/office-images/vitra-office-furniture.jpg"
-];
+].map(src => {
+  const slug = src
+    .replace(/\//gi, "_")
+    .replace(/\./gi, "_")
+    .replace(/\s/gi, "_");
+  return {
+    labels: [],
+    imgAltText: "This is the alt text",
+    imgSrc: src,
+    slug
+  };
+});
+
+export const initialImgDownloadState: ImgDownload = null;
+
+export const initialEditingState = false;
 
 export const initialAppState: AppState = {
-  images: initialImagesState
+  images: initialImagesState,
+  imgDownload: initialImgDownloadState,
+  editing: initialEditingState
 };

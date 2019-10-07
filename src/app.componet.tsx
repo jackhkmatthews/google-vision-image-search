@@ -14,7 +14,7 @@ const App: React.FC<Props> = ({ store }: Props) => (
     <Router>
       <Route path="/" component={Home} exact={true} />
       <Route path="/images" component={Images} exact={true} />
-      <Route path="/images/:index" component={Image} exact={true} />
+      <Route path="/images/:slug" component={Image} exact={true} />
     </Router>
   </Provider>
 );

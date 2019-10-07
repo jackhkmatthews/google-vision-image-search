@@ -3,14 +3,15 @@ import * as S from "./images.styles";
 import { useSelector } from "react-redux";
 import { selectImages } from "../../redux/selectors";
 import { Link } from "react-router-dom";
+import { Image } from "../../redux/types";
 
 const Images: React.FC = () => {
   const images = useSelector(selectImages);
-  const listItems = images.map((image: string, index: number) => {
-    const src = `https://storage.googleapis.com/${image}`;
+  const listItems = images.map((image: Image) => {
+    const src = `https://storage.googleapis.com/${image.imgSrc}`;
     return (
-      <Link to={`/images/${index}`} key={src}>
-        <img src={src} alt="foo" />
+      <Link to={`/images/${image.slug}`} key={src}>
+        <img src={src} alt={image.imgAltText} />
       </Link>
     );
   });
