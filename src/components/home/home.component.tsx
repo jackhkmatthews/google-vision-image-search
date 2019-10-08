@@ -6,7 +6,11 @@ const Home: React.FC = () => {
   return (
     <S.Home>
       <Navbar />
-      <S.Title>Home</S.Title>
+      <S.Inner>
+        <S.Link to={"/images"}>
+          <S.Title>View Images</S.Title>
+        </S.Link>
+      </S.Inner>
     </S.Home>
   );
 };
