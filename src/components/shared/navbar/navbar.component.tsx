@@ -4,11 +4,12 @@ import MainLayout from "../main-layout/main-layout.component";
 
 interface Props {
   children?: any;
+  className?: string;
 }
 
-const Navbar: React.FC<Props> = ({ children }: Props) => {
+const Navbar: React.FC<Props> = ({ children, className }: Props) => {
   return (
-    <S.Navbar>
+    <S.Navbar className={className}>
       <MainLayout>
         <S.Link to={"/"}>
           <S.Title>ImgCleaner</S.Title>
