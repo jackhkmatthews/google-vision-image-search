@@ -2,6 +2,7 @@ import React from "react";
 import * as S from "./image.styles";
 import { useSelector } from "react-redux";
 import { selectImages } from "../../redux/selectors";
+import Navbar from "../shared/navbar/navbar.component";
 
 export interface Props {
   match: {
@@ -18,6 +19,7 @@ const Image: React.FC<Props> = ({ match }: Props) => {
   const src = `https://storage.googleapis.com/${image.imgSrc}`;
   return (
     <S.Image>
+      <Navbar />
       <S.Title>Image</S.Title>
       <img src={src} alt={image.imgAltText} />
     </S.Image>

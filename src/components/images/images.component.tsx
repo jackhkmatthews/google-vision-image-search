@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { selectImages } from "../../redux/selectors";
 import { Link } from "react-router-dom";
 import { Image } from "../../redux/types";
+import Navbar from "../shared/navbar/navbar.component";
 
 const Images: React.FC = () => {
   const images = useSelector(selectImages);
@@ -17,6 +18,7 @@ const Images: React.FC = () => {
   });
   return (
     <S.Images>
+      <Navbar />
       <S.Title>Images</S.Title>
       {listItems}
     </S.Images>
