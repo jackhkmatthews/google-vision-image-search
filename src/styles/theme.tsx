@@ -14,7 +14,7 @@ const breakpoints = {
   lg: 1280
 };
 
-export const device = {
+const device = {
   md: `(min-width: ${breakpoints.md}px)`,
   lg: `(min-width: ${breakpoints.lg}px)`
 };
@@ -25,11 +25,16 @@ const gridValues = {
   paddinglLg: 0
 };
 
+const spacing = {
+  navbarMarginBottom: 30
+};
+
 const theme = {
   breakpoints,
   colors,
   device,
-  gridValues
+  gridValues,
+  spacing
 };
 
 export default theme;

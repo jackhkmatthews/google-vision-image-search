@@ -4,6 +4,18 @@ import { normalize } from "styled-normalize";
 const GlobalStyles = createGlobalStyle`
   ${normalize}
 
+  html {
+    box-sizing: border-box;
+    touch-action: manipulation;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+    list-style: none;
+  }
+
   body {  
     -webkit-font-smoothing: antialiased;
     margin: 0;
