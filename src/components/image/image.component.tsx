@@ -3,6 +3,8 @@ import * as S from "./image.styles";
 import { useSelector } from "react-redux";
 import { selectImages } from "../../redux/selectors";
 import Navbar from "../shared/navbar/navbar.component";
+import ImageEditor from "../shared/image-editor/image-editor.component";
+import MainLayout from "../shared/main-layout/main-layout.component";
 
 export interface Props {
   match: {
@@ -20,8 +22,10 @@ const Image: React.FC<Props> = ({ match }: Props) => {
   return (
     <S.Image>
       <Navbar />
-      <S.Title>Image</S.Title>
-      <img src={src} alt={image.imgAltText} />
+      <S.StyledImageToolbar />
+      <MainLayout>
+        <ImageEditor src={src} />
+      </MainLayout>
     </S.Image>
   );
 };

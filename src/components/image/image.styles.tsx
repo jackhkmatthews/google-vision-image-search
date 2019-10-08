@@ -1,9 +1,8 @@
 import styled from "styled-components/macro";
+import ImageToolbar from "../shared/image-toolbar/image-toolbar.component";
 
-export const Image = styled.div`
-  background-color: pink;
-`;
+export const Image = styled.div``;
 
-export const Title = styled.h1`
-  color: white;
+export const StyledImageToolbar = styled(ImageToolbar)`
+  margin-bottom: ${props => props.theme.spacing.navbarMarginBottom}px;
 `;
