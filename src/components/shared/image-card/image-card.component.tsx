@@ -14,7 +14,7 @@ const ImageCard: React.FC<Props> = ({ src, alt, slug, className }: Props) => {
       <S.Link to={`/images/${slug}`}>
         <S.Image src={src} alt={alt} />
         <S.Overlay>
-          <S.Copy>Edit</S.Copy>
+          <S.Copy>Manage</S.Copy>
         </S.Overlay>
       </S.Link>
     </S.ImageCard>
