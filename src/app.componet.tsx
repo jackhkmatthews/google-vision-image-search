@@ -7,6 +7,7 @@ import Image from "./components/image/image.component";
 import GlobalStyles from "./styles/global-styles";
 import { ThemeProvider } from "styled-components";
 import theme from "./styles/theme";
+import "./utils/stack-blur";
 
 interface Props {
   store: any;
