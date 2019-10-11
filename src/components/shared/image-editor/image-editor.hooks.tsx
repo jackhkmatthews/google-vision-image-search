@@ -1,14 +1,11 @@
 import { useRef, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { setImgDownload } from "../../../redux/actions";
-import { selectEditing } from "../../../redux/selectors";
 
 export function usePaintImageOnCanvas(
   canvasRef: React.MutableRefObject<HTMLCanvasElement>,
-  src: string
+  src: string,
+  dataURLCallback: (dataURL: string) => void,
+  editing: boolean
 ): [React.MutableRefObject<number>, React.MutableRefObject<number>] {
-  const dispatch = useDispatch();
-  const editing = useSelector(selectEditing);
   const imageRef = useRef(new Image());
   const imageWidth = useRef(0);
   const imageHeight = useRef(0);
@@ -27,7 +24,7 @@ export function usePaintImageOnCanvas(
         imageWidth.current,
         imageHeight.current
       );
-      dispatch(setImgDownload(canvasRef.current.toDataURL()));
+      dataURLCallback(canvasRef.current.toDataURL());
     }
   };
 

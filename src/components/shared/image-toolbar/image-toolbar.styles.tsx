@@ -37,3 +37,11 @@ export const CTA = styled.button<Props>`
     props.red ? props.theme.colors.white : props.theme.colors.black};
   border: none;
 `;
+
+export const DownloadLink = styled.a`
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  background-color: green;
+`;

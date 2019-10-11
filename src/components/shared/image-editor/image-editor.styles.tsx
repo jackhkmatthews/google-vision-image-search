@@ -7,7 +7,7 @@ interface Props {
 export const ImageEditor = styled.div`
   display: inline-block;
   width: 100%;
-  padding: 50px;
+  padding: 50px 0;
 `;
 
 export const Canvas = styled.canvas<Props>`

@@ -15,7 +15,12 @@ const ImageEditor: React.FC<Props> = ({ src, className }: Props) => {
   const editing = useSelector(selectEditing);
   const canvasClicks = useSelector(selectCanvasClicks);
   const canvasRef = useRef(document.createElement("canvas"));
-  const [imageWidth, imageHeight] = usePaintImageOnCanvas(canvasRef, src);
+  const [imageWidth, imageHeight] = usePaintImageOnCanvas(
+    canvasRef,
+    src,
+    dataURL => dispatch(setImgDownload(dataURL)),
+    editing
+  );
   const blurSize = 50;
   const blurRadius = 10;
   const lastCanvasClick = canvasClicks[canvasClicks.length - 1];
