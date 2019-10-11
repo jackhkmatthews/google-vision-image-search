@@ -2,14 +2,17 @@ import { combineReducers } from "redux";
 import {
   initialImagesState,
   initialEditingState,
-  initialImgDownloadState
+  initialImgDownloadState,
+  initialCanvasClicksState
 } from "./initial";
 import {
   Image,
   SetEditingAction,
   APP_ACTION_TYPES,
   SetImgDownloadAction,
-  ImgDownload
+  ImgDownload,
+  SetCanvasClicksAction,
+  CanvasClick
 } from "./types";
 
 function images(state = initialImagesState): Image[] {
@@ -40,8 +43,21 @@ function imgDownload(
   }
 }
 
+function canvasClicks(
+  state = initialCanvasClicksState,
+  action: SetCanvasClicksAction
+): CanvasClick[] {
+  switch (action.type) {
+    case APP_ACTION_TYPES.setCanvasClicks:
+      return action.canvasClicks;
+    default:
+      return state;
+  }
+}
+
 export const imagesApp = combineReducers({
   images,
   editing,
+  canvasClicks,
   imgDownload
 });

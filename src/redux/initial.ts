@@ -1,4 +1,4 @@
-import { AppState, Image, ImgDownload } from "./types";
+import { AppState, Image, ImgDownload, CanvasClick } from "./types";
 
 export const initialImagesState: Image[] = [
   "interview-resources/office-images/1.jpg",
@@ -111,8 +111,11 @@ export const initialImgDownloadState: ImgDownload = null;
 
 export const initialEditingState = false;
 
+export const initialCanvasClicksState = [] as CanvasClick[];
+
 export const initialAppState: AppState = {
   images: initialImagesState,
   imgDownload: initialImgDownloadState,
-  editing: initialEditingState
+  editing: initialEditingState,
+  canvasClicks: initialCanvasClicksState
 };
