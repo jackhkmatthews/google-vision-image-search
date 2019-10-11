@@ -1,3 +1,4 @@
+/* eslint-disable */
 const mul_table = [
   512,
   512,
@@ -1009,7 +1010,5 @@ function BlurStack() {
   this.a = 0;
   this.next = null;
 }
-
-console.log(stackBlurCanvasRGBA);
 
 window.stackBlurCanvasRGBA = stackBlurCanvasRGBA;
