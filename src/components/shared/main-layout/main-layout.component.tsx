@@ -3,10 +3,11 @@ import * as S from "./main-layout.styles";
 
 interface Props {
   children: any;
+  className?: string;
 }
 
-const MainLayout: React.FC<Props> = ({ children }: Props) => {
-  return <S.MainLayout>{children}</S.MainLayout>;
+const MainLayout: React.FC<Props> = ({ children, className }: Props) => {
+  return <S.MainLayout className={className}>{children}</S.MainLayout>;
 };
 
 export default MainLayout;
