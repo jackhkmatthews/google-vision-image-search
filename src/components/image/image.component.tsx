@@ -24,6 +24,7 @@ const Image: React.FC<Props> = ({ match }: Props) => {
       <Navbar />
       <S.StyledImageToolbar />
       <MainLayout>
+        <S.StyledImageEditor src={src} />
         {imgDownload ? (
           <S.Download>
             <S.DownloadLink href={imgDownload} download={image.imgSrc}>
@@ -31,7 +32,6 @@ const Image: React.FC<Props> = ({ match }: Props) => {
             </S.DownloadLink>
           </S.Download>
         ) : null}
-        <S.StyledImageEditor src={src} />
       </MainLayout>
     </S.Image>
   );
