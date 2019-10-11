@@ -1,6 +1,7 @@
 const colors = {
   black: "#000000",
   white: "#ffffff",
+  red: "red",
   grey1: "#f5f5f5",
   grey2: "#e0e0e0",
   grey3: "#9e9e9e",
