@@ -7,10 +7,9 @@ import { Image } from "../../../redux/types";
 const ImageCardGrid: React.FC = () => {
   const images = useSelector(selectImages);
   const listItems = images.map((image: Image) => {
-    const src = `https://storage.googleapis.com/${image.imgSrc}`;
     return (
       <S.StyledImageCard
-        src={src}
+        src={image.imgSrc}
         alt={image.imgAltText}
         slug={image.slug}
         key={image.slug}

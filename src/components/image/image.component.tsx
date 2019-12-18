@@ -17,13 +17,13 @@ const Image: React.FC<Props> = ({ match }: Props) => {
   const image = useSelector(selectImages).filter(
     image => image.slug === match.params.slug
   )[0];
-  const src = `https://storage.googleapis.com/${image.imgSrc}`;
+  const downloadName = `${image.imgSrc}.jpeg`;
   return (
     <S.Image>
       <Navbar />
-      <S.StyledImageToolbar downloadName={image.imgSrc} />
+      <S.StyledImageToolbar downloadName={downloadName} />
       <MainLayout>
-        <S.StyledImageEditor src={src} />
+        <S.StyledImageEditor src={image.imgSrc} />
       </MainLayout>
     </S.Image>
   );

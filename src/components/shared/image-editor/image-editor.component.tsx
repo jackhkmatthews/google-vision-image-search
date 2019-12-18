@@ -21,23 +21,26 @@ const ImageEditor: React.FC<Props> = ({ src, className }: Props) => {
     dataURL => dispatch(setImgDownload(dataURL)),
     editing
   );
-  const blurSize = 50;
-  const blurRadius = 10;
+  const blurSize = 100;
+  const blurRadius = 30;
   const lastCanvasClick = canvasClicks[canvasClicks.length - 1];
 
+  const lastOffsetX = lastCanvasClick ? lastCanvasClick.offsetX : null;
+  const lastOffsetY = lastCanvasClick ? lastCanvasClick.offsetY : null;
+
   useEffect(() => {
-    if (lastCanvasClick) {
+    if (lastOffsetX && lastOffsetY) {
       window.stackBlurCanvasRGBA(
         canvasRef.current,
-        lastCanvasClick.offsetX,
-        lastCanvasClick.offsetY,
+        lastOffsetX,
+        lastOffsetY,
         blurSize,
         blurSize,
         blurRadius
       );
       dispatch(setImgDownload(canvasRef.current.toDataURL()));
     }
-  }, [lastCanvasClick, dispatch, canvasRef, blurSize]);
+  }, [lastOffsetX, lastOffsetY, canvasRef, blurSize, dispatch]);
 
   const handleClick = (
     event: React.MouseEvent<HTMLCanvasElement, MouseEvent>

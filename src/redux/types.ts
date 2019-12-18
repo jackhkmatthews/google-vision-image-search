@@ -1,7 +1,7 @@
 export interface Image {
   labels?: string[];
   imgAltText?: string;
-  imgSrc?: string;
+  imgSrc: string;
   slug?: string;
 }
 
