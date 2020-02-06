@@ -8,7 +8,7 @@ const Home: React.FC = () => {
       <Navbar />
       <S.Inner>
         <S.Link to={"/images"}>
-          <S.Title>View Images</S.Title>
+          <S.Title>View All</S.Title>
         </S.Link>
       </S.Inner>
     </S.Home>
