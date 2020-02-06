@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f916b28_65d463e4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1017599
+      },
+      "writtenOn": "2020-02-06T14:17:39Z",
+      "side": 1,
+      "message": "Should this have a change id?",
+      "revId": "f82a9b4e15f99efe0b5e980a86d027a463bff8d4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "453a7f98_74a2b9a2",
+        "filename": "src/components/home/home.component.tsx",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1017599
+      },
+      "writtenOn": "2020-02-06T14:17:39Z",
+      "side": 1,
+      "message": "Do we still need \u0027images\u0027?",
+      "revId": "f82a9b4e15f99efe0b5e980a86d027a463bff8d4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    }
+  ]
+}
