@@ -33,6 +33,24 @@
       "revId": "f82a9b4e15f99efe0b5e980a86d027a463bff8d4",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "118628b9_0f3adbc0",
+        "filename": "src/components/home/home.component.tsx",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1017599
+      },
+      "writtenOn": "2020-02-06T14:37:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "453a7f98_74a2b9a2",
+      "revId": "f82a9b4e15f99efe0b5e980a86d027a463bff8d4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
